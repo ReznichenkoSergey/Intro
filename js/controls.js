@@ -31,11 +31,15 @@ function FormPhoneValidate() {
     "+38 (094)",
   ];
   if (phoneValue.length >= 12) {
-      console.log(phoneValue.length);
-    document.querySelector(".phone__input-error").hidden = array.includes(
-      phoneValue.substring(0, 9)
-    );
+    document.querySelector(".phone__input-error").hidden = array.includes(phoneValue.substring(0, 9));
+    if (!array.includes(phoneValue.substring(0, 9))) {
+      document.querySelector(".phone__input-value").style.borderColor = " #e40428";
+    } 
+    else {
+      document.querySelector(".phone__input-value").style.borderColor = null;
+    }
   } else {
+    document.querySelector(".phone__input-value").style.borderColor = null;
     document.querySelector(".phone__input-error").hidden = true;
   }
 
