@@ -55,7 +55,7 @@ form {
 
 .phone__input {
   text-align: start;
-  padding-left: 51px;
+  padding-left: 58px;
   margin-bottom: 53.4px;
 }
 
@@ -67,9 +67,8 @@ form {
   font-style: normal;
   line-height: 24px;
   height: 28px;
-  width: 259px;
-  text-align: start;
-  padding-left: 24px;
+  width: 225px;
+  text-align: center;
   padding-bottom: 8px;
   border-bottom: 2px solid #232e83;
 }
@@ -79,6 +78,7 @@ form {
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
+  margin-left: 13px;
   line-height: 14.4px;
   color: #e40428;
 }
@@ -199,7 +199,7 @@ form {
 }
 .phone__rules-text {
   position: absolute;
-  top: 86%;
+  top: 70%;
   transform: translateY(-50%);
 }
 
