@@ -15,7 +15,7 @@ $(window).load(function () {
   });
 });
 
-function FormPhoneValidate() {
+function formPhoneValidate() {
   let x = document.querySelector(".phone__rules-checkbox").checked;
   let phoneValue = document.querySelector(".phone__input-value").value;
   console.log(phoneValue);
@@ -68,7 +68,8 @@ console.log(phoneValue.substring(0,9).indexOf('_'));
         phoneValue.substring(0, 9)
       );
       if (!array.includes(phoneValue.substring(0, 9))) {
-        document.querySelector(".phone__input-value").style.borderColor = "#e40428";
+        document.querySelector(".phone__input-value").style.borderColor =
+          "#e40428";
       } else {
         document.querySelector(".phone__input-value").style.borderColor = null;
       }
@@ -90,3 +91,5 @@ console.log(array.includes(phoneValue.substring(0, 9)));
     array.includes(phoneValue.substring(0, 9))
   );
 }
+
+

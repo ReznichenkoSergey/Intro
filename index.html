@@ -14,27 +14,27 @@
 
 <body>
 
-    <form class="phone" action="">
+    <form action="">
         <div class="phone__header">
             <span>Для реєстрації введіть<br>номер телефону</span>
-            <a href="#"><img class="phone__header-img" src="./img/support.svg" alt="Support"></a>
+            <a href="#"><img class="header-img" src="./img/support.svg" alt="Support"></a>
         </div>
         <div class="phone__input">
-            <input onkeyup="FormPhoneValidate()" class="phone__input-value" id="phone" type="tel"
+            <input onkeyup="formPhoneValidate()" class="phone__input-value" id="phone" type="tel"
                 placeholder="+38 (077) 777 77 77">
             <span class="phone__input-error" hidden>Некорректний код мобiльного оператора</span>
         </div>
         <div class="phone__rules">
-            <input onchange="FormPhoneValidate()" class="phone__rules-checkbox" id="checkbox" name="checkbox"
+            <input onchange="formPhoneValidate()" class="phone__rules-checkbox" id="checkbox" name="checkbox"
                 type="checkbox">
 
             <label class="phone__rules-label" for="checkbox"><span class="phone__rules-text">Я погоджуюсь з <a
-                        class="phone__rules-link" href="#">правилами участі</a> у програмі лояльності та
+                        class="phone__rules-link" href="https://fozzyshop.ua/upload/app/briefly_about_pl.html">правилами участі</a> у програмі лояльності та
                     підтверджую,<br>що мені є 18 років<span></label>
 
         </div>
-        <div class="phone__button">
-            <button class="button-phone" type="submit" disabled>ОТРИМАТИ КОД</button>
+        <div class="phone__submit">
+            <button class="phone__submit-button" type="submit" disabled>ОТРИМАТИ КОД</button>
         </div>
     </form>
 
