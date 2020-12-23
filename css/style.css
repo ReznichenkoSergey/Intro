@@ -87,6 +87,7 @@ form {
   color: #e40428;
   display: block;
   text-align: center;
+  white-space: nowrap;
 }
 
 .phone__rules-flag {
