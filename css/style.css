@@ -59,7 +59,7 @@ form {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 53.4px;
-  width: 225px;
+  width: 230px;
 }
 
 .phone__input-value {
@@ -72,7 +72,7 @@ form {
   font-style: normal;
   line-height: 24px;
   height: 28px;
-  width: 225px;
+  width: 230px;
   text-align: center;
   padding-bottom: 8px;
   border-bottom: 2px solid #232e83;
@@ -85,6 +85,8 @@ form {
   font-size: 12px;
   line-height: 14.4px;
   color: #e40428;
+  display: block;
+  text-align: center;
 }
 
 .phone__rules-flag {
@@ -170,7 +172,7 @@ form {
   content: "";
   position: absolute;
   /*left: 0;*/
-  left: calc(50% - 287px/2);
+  left: calc(50% - 287px / 2);
   top: 0;
   margin: 4px;
   width: 23.02px;
@@ -191,7 +193,7 @@ form {
   will-change: transform;
   position: absolute;
   top: 10px;
-  left: calc(50% - 287px/2 + 9px);
+  left: calc(50% - 287px / 2 + 9px);
 }
 
 .phone__rules-label {
