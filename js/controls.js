@@ -1,13 +1,3 @@
-/*$(window).load(function () {
-  var phones = [{ mask: "+38 (0##) ### ## ##" }];
-  $("#phone").inputmask({
-    mask: phones,
-    placeholder: "",
-    supportsInputType: ["tel"],
-    greedy: false,
-    definitions: { "#": { validator: "[0-9]", cardinality: 1 } },
-  });
-});*/
 $(window).load(function () {
   var phones = [{ mask: "+38 (0##) ### ## ##" }];
   $("#phone").inputmask({
@@ -36,28 +26,6 @@ function formPhoneValidate() {
     "+38 (092)",
     "+38 (094)",
   ];
-  //console.log(phoneValue.length);
-  /*
-  if (phoneValue.length >= 12) {
-    //document.querySelector(".phone__input-error").hidden = array.includes(phoneValue.substring(0, 9));
-    if (!array.includes(phoneValue.substring(0, 9))) {
-      document.querySelector(".phone__input-value").style.borderColor = " #e40428";
-    } 
-    else {
-      document.querySelector(".phone__input-value").style.borderColor = null;
-    }
-  } else {
-    document.querySelector(".phone__input-value").style.borderColor = null;
-    document.querySelector(".phone__input-error").hidden = true;
-  }
-  */
-  /*
-console.log(phoneValue.substring(0,9));
-console.log(phoneValue.substring(0,9).indexOf('_'));
-*/
-  //debugger;
-
-  console.log(phoneValue.length);
 
   if (phoneValue.length === 0) {
     document.querySelector(".phone__input-value").style.borderColor = null;
@@ -78,13 +46,7 @@ console.log(phoneValue.substring(0,9).indexOf('_'));
       document.querySelector(".phone__input-error").hidden = true;
     }
   }
-  /*
-console.log(phoneValue.indexOf('_') === -1);
-console.log(phoneValue.length)
-console.log(x)
-console.log(array.includes(phoneValue.substring(0, 9)));
-*/
-  document.querySelector(".button-phone").disabled = !(
+  document.querySelector(".phone__submit-button").disabled = !(
     phoneValue.length === 19 &&
     phoneValue.indexOf("_") === -1 &&
     x &&
@@ -92,4 +54,9 @@ console.log(array.includes(phoneValue.substring(0, 9)));
   );
 }
 
-
+function formOtpValidate() {
+  let otp = document.querySelector(".otp__input-value");
+  document.querySelector(".otp__submit-button").disabled = !(
+    otp.value.length === 6
+  );
+}
