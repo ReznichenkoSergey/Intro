@@ -1,4 +1,4 @@
-$(window).load(function () {
+/*$(window).load(function () {
   var phones = [{ mask: "+38 (0##) ### ## ##" }];
   $("#phone").inputmask({
     mask: phones,
@@ -7,7 +7,13 @@ $(window).load(function () {
     greedy: false,
     definitions: { "#": { validator: "[0-9]", cardinality: 1 } },
   });
-});
+});*/
+$(window).load(function () {
+    var phones = [{ mask: "+38 (0##) ### ## ##" }];
+    $("#phone").inputmask({
+      mask: phones});
+  });
+
 
 function FormPhoneValidate() {
   let x = document.querySelector(".phone__rules-checkbox").checked;
