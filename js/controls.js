@@ -21,7 +21,9 @@ function formPhoneValidate() {
         "Некорректний код мобiльного оператора";
     }
   }
-  document.querySelector(".phone__submit-button").disabled = !(value.length === 13 && x);
+  document.querySelector(".phone__submit-button").disabled = !(
+    value.length === 13 && x
+  );
 }
 
 /*Валидация ОТП кода*/
@@ -37,4 +39,30 @@ function formBarcodeValidate() {
   document.querySelector(".barcode__submit-button").disabled = !(
     otp.value.length === 13
   );
+}
+
+$(".btn").click(function () {
+  $(".user-location").text("New Text");
+});
+$(".user-location").on("DOMSubtreeModified", function () {
+  alert("changed");
+});
+
+function showHideCommonError() {
+  debugger;
+  console.log('OK');
+  let x = document.querySelector(".flow-error");
+  if (x.innerHTML.length > 0) {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function sample() {
+  let x = document.querySelector(".flow-error");
+  let rrr = document.querySelector("#rrr");
+  console.log(x);
+  console.log(rrr);
+  x.innerHTML = rrr.value;
 }

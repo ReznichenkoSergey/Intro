@@ -399,7 +399,7 @@ form {
 /*Barcode Input*/
 .barcode__input-container {
   position: relative;
-  border-bottom: 1px solid #232E83;
+  border-bottom: 1px solid #232e83;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5px;
@@ -488,4 +488,85 @@ form {
 }
 .barcode__submit-button:disabled {
   background: #c4c4c4;
+}
+
+/*  Support */
+
+.support__header {
+  display: block;
+  min-height: 51px;
+  min-width: 226px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 83px;
+}
+
+.support__header-label {
+  display: block;
+  line-height: 21.6px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
+  color: #4f4f4f;
+  text-align: center;
+}
+
+.support__links{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 53.4px;
+  width: 260px;
+}
+
+.support__links-phone,
+.support__links-phone:hover,
+.support__links-phone:active,
+.support__links-mail,
+.support__links-mail:hover,
+.support__links-mail:active{
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #4f4f4f;
+  display: block;
+  height: 34px;
+  text-align: center;
+  white-space: nowrap;
+  text-align: left;
+  text-decoration: none;
+  border: none;
+  width: 280px;
+}
+
+.phoneimage{
+  /*height: 25px;
+  width: 25px;*/
+  padding-right: 15px;
+}
+
+.mailimage{
+  /*height: 20px;
+  width: 26px;*/
+  padding-right: 15px;
+}
+
+.phonearrow{
+  margin-left: 75px;
+}
+
+.mailarrow{
+  margin-left: 20px;
+}
+
+
+.support__links-mail{
+  margin-bottom: 27px;
+}
+
+.support__links-phone {
+  margin-bottom: 56px;
 }
