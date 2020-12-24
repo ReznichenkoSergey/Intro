@@ -23,11 +23,17 @@ function formPhoneValidate() {
   document.querySelector(".phone__submit-button").disabled = !(value.length === 13 && x);
 }
 
-
+/*Валидация ОТП кода*/
 function formOtpValidate() {
-    console.log('fsdfsdfsdfsdf');
   let otp = document.querySelector(".otp__input-value");
   document.querySelector(".otp__submit-button").disabled = !(
     otp.value.length === 6
+  );
+}
+/*Валидация карты*/
+function formBarcodeValidate() {
+  let otp = document.querySelector(".barcode__input-value");
+  document.querySelector(".barcode__submit-button").disabled = !(
+    otp.value.length === 13
   );
 }
