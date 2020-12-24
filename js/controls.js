@@ -5,6 +5,7 @@ $(window).load(function () {
   });
 });
 
+/*Валидация телефона*/
 function formPhoneValidate() {
   let x = document.querySelector(".phone__rules-checkbox").checked;
   let phoneValue = document.querySelector(".phone__input-value").value;
