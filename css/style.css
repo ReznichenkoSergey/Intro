@@ -669,6 +669,9 @@ form {
   .main-container {
     align-items: unset;
   }
+  .support__logo{
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1180.1px) {
