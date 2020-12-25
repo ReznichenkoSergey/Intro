@@ -577,11 +577,14 @@ form {
 
 .main-container {
   display: grid;
-  grid-gap: 10px;
-  grid-template-areas: "A B B";
-  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  grid-template-areas: "A B" "C C";
+  grid-template-columns: 1fr 1.5fr;
   width: 100%;
   height: 100vh;
+  justify-items: center;
+  align-items: center;
+  padding-top: 20px;
 }
 
 .logo {
@@ -590,7 +593,6 @@ form {
   background-color: #ffffff;
   display: block;
   margin-left: auto;
-  margin-right: auto;
   width: 460px;
   height: 641px;
 }
@@ -601,12 +603,39 @@ form {
   top: 50%;
 }
 
+.main-error {
+  grid-area: C;
+  display: table;
+  width: 608.18px;
+  height: 53.64px;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 60px;
+  background: #7d817e;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.main-error__text{
+  display:table-cell;
+  vertical-align:middle;
+}
+
 .logo__container {
   overflow: hidden;
   width: 324.16px;
   height: 181.97px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 71px;
+  margin-top: -45px;
 }
 
 .logo__person {
@@ -622,11 +651,11 @@ form {
   width: 26px;
   height: 26px;
   position: absolute;
-  top: 218.45px;
+  top: 244px;
   right: 59.71px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1180px) {
   .main-container {
     grid-template-areas: "B";
     grid-template-columns: 1fr;
@@ -634,30 +663,29 @@ form {
   .logo {
     display: none;
   }
+  .main-error{
+    display: none;
+  }
 }
 
-@media only screen and (min-width: 768px) {
-  .logo {
-    top: calc(50vh - 641px / 2);
-  }
+@media only screen and (min-width: 1180.1px) {
   form {
-    padding-top: 111px;
     width: 652.93px;
     height: 658.47px;
     box-shadow: 0px 9px 20px -1px rgba(228, 4, 40, 0.1);
     border-radius: 20px;
-    top: calc(50vh - 652.93px / 2);
   }
   .header-img {
     width: 46.25px;
     height: 40.65px;
     right: 105.65px;
-    top: 118.46px;
+    top: 144.46px;
   }
 
   .phone__header span {
     font-size: 28px;
     line-height: 33.6px;
+    margin-top: 112.78px;
   }
   .phone__rules {
     padding-right: 90px;
@@ -683,6 +711,7 @@ form {
   }
   .phone__input {
     position: absolute;
+    width: auto;
     top: 220.78px;
     left: 0;
     right: 0;
@@ -690,7 +719,14 @@ form {
   .phone__input-value {
     font-size: 24px;
     line-height: 28.8px;
-    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .phone__input-error {
+    font-size: 16px;
+    line-height: 19.2px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .phone__submit {
     top: 460px;
