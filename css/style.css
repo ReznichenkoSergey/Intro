@@ -831,4 +831,54 @@ form {
     margin-left: auto;
     margin-right: auto;
   }
+
+  /*////////////////// Support  /////////////////*/
+  .support__header {
+    margin-bottom: 43.27px;
+  }
+
+  .support__header span {
+    font-size: 28px;
+    line-height: 33.6px;
+    margin-top: 112.78px;
+  }
+  .support__logo {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 53.4px;
+    width: 260px;
+  }
+  .support__links-phone,
+  .support__links-phone:hover,
+  .support__links-phone:active,
+  .support__links-phone:focus {
+    font-size: 26px;
+    line-height: 31.2px;
+    text-decoration-line: underline;
+    padding-bottom:2px;
+  }
+  .support__links-mail,
+  .support__links-mail:hover,
+  .support__links-mail:active,
+  .support__links-mail:focus{
+    font-size: 26px;
+    line-height: 31.2px;
+    text-decoration-line: underline;
+    margin-bottom: 103px;
+  }
+  .support__logo-recyclebin {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .phoneimage,
+  .mailimage{
+    height: 26.57px;
+    width: 52.57px;
+  }
+  .phonearrow,
+  .mailarrow{
+    display: none;
+  }
 }
