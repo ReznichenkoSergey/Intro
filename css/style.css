@@ -732,13 +732,16 @@ form {
     margin-right: auto;
   }
   .phone__submit,
-  .barcode__submit {
+  .barcode__submit,
+  .otp__submit {
     top: 460px;
   }
   .phone__submit-button,
   .phone__submit-button:hover,
   .barcode__submit-button,
-  .barcode__submit-button:hover {
+  .barcode__submit-button:hover,
+  .otp__submit-button,
+  .otp__submit-button:hover {
     width: 440px;
     height: 62.8px;
     font-size: 24px;
@@ -779,6 +782,49 @@ form {
     line-height: 24px;
   }
   .barcode__input-link:hover {
+    border-bottom: 1px solid rgba(228, 4, 40, 0.8);
+    color: rgba(228, 4, 40, 0.8);
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*//////////////////// OTP ///////////////////////*/
+
+  .otp__header {
+    margin-top: 110px;
+    margin-bottom: 61px;
+  }
+
+  .otp__header span {
+    font-size: 28px;
+  }
+  .otp__input-container {
+    height: 31px;
+    margin-bottom: 5px;
+  }
+  .otp__input-value {
+    font-size: 26px;
+    line-height: 31px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 31px;
+  }
+  .otp__input-error {
+    font-size: 16px;
+    line-height: 19.2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+  .otp__input-link,
+  .otp__input-link:focus,
+  .otp__input-link:hover,
+  .otp__input-link:active {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .otp__input-link:hover {
     border-bottom: 1px solid rgba(228, 4, 40, 0.8);
     color: rgba(228, 4, 40, 0.8);
     width: 200px;
