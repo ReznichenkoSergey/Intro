@@ -12,23 +12,37 @@
 </head>
 
 <body>
-    <form action="">
-        <div class="barcode__header">
-            <span class="barcode__header-label">Для реєстрації введіть<br>номер картки</span>
-            <a href="./otp.html"><img class="header-img" src="./img/support.svg" alt="Гаряча лінія"></a>
+    <div class="main-container">
+        <div class="main-error">
+            <span class="main-error__text">Відправка коду на даний номер заблокована з причин безпеки</span>
         </div>
-        <div class="barcode__input">
-            <div class="barcode__input-container">
-                <input onkeyup="formBarcodeValidate()" class="barcode__input-value" id="barcode" type="text" size="13"
-                    maxlength="13">
+
+        <div class="logo">
+            <div class="logo__container">
+                <img class="logo__banner" src="./img/banner.svg" alt="person">
             </div>
-            <span class="barcode__input-error">Не корректный номер карты</span>
-            <a class="barcode__input-link" href="#">У мене немає картки</a>
+            <img class="logo__person" src="./img/person.svg" alt="person">
+            <img class="logo__smbin" src="./img/recyclebin_sm.svg" alt="person">
         </div>
-        <div class="barcode__submit">
-            <button class="barcode__submit-button" type="submit" disabled>ДАЛІ</button>
-        </div>
-    </form>
+
+        <form action="">
+            <div class="barcode__header">
+                <span class="barcode__header-label">Для реєстрації введіть<br>номер картки</span>
+                <a href="./otp.html"><img class="header-img" src="./img/support.svg" alt="Гаряча лінія"></a>
+            </div>
+            <div class="barcode__input">
+                <div class="barcode__input-container">
+                    <input onkeyup="formBarcodeValidate()" class="barcode__input-value" id="barcode" type="text"
+                        size="13" maxlength="13">
+                </div>
+                <span class="barcode__input-error">Не корректный номер карты</span>
+                <a class="barcode__input-link" href="#">У мене немає картки</a>
+            </div>
+            <div class="barcode__submit">
+                <button class="barcode__submit-button" type="submit" disabled>ДАЛІ</button>
+            </div>
+        </form>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>

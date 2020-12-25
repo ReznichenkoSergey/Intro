@@ -12,19 +12,33 @@
 </head>
 
 <body>
-    <form action="">
-        <div class="support__header">
-            <span class="support__header-label">Зв’яжіться з нами зручним<br>для Вас способом</span>
+    <div class="main-container">
+        <div class="main-error">
+            <span class="main-error__text">Відправка коду на даний номер заблокована з причин безпеки</span>
         </div>
-        <div class="support__links">
-            <a class="support__links-phone" href="tel:0-800-600-168"><img class="phoneimage" src="./img/phone.svg"
-                    alt="Телефон">0-800-600-168<img class="phonearrow" src="./img/arrow.svg" alt=""></a>
-            <a class="support__links-mail"
-                href="intent://fozzy.mobile.callback#Intent;scheme=fozzy_write_gl;action=android.intent.action.VIEW;S.phone=+380951234567;S.card=1234567890123;end"><img
-                    class="mailimage" src="./img/mailbox.svg" alt="Електронна адреса">offer-fozzy@fozzy.ua<img
-                    class="mailarrow" src="./img/arrow.svg" alt=""></a>
+
+        <div class="logo">
+            <div class="logo__container">
+                <img class="logo__banner" src="./img/banner.svg" alt="person">
+            </div>
+            <img class="logo__person" src="./img/person.svg" alt="person">
+            <img class="logo__smbin" src="./img/recyclebin_sm.svg" alt="person">
         </div>
-    </form>
+
+        <form action="">
+            <div class="support__header">
+                <span class="support__header-label">Зв’яжіться з нами зручним<br>для Вас способом</span>
+            </div>
+            <div class="support__links">
+                <a class="support__links-phone" href="tel:0-800-600-168"><img class="phoneimage" src="./img/phone.svg"
+                        alt="Телефон">0-800-600-168<img class="phonearrow" src="./img/arrow.svg" alt=""></a>
+                <a class="support__links-mail"
+                    href="intent://fozzy.mobile.callback#Intent;scheme=fozzy_write_gl;action=android.intent.action.VIEW;S.phone=+380951234567;S.card=1234567890123;end"><img
+                        class="mailimage" src="./img/mailbox.svg" alt="Електронна адреса">offer-fozzy@fozzy.ua<img
+                        class="mailarrow" src="./img/arrow.svg" alt=""></a>
+            </div>
+        </form>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>

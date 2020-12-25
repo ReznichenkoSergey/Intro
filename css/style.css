@@ -623,9 +623,9 @@ form {
   margin-bottom: 5px;
 }
 
-.main-error__text{
-  display:table-cell;
-  vertical-align:middle;
+.main-error__text {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .logo__container {
@@ -663,8 +663,11 @@ form {
   .logo {
     display: none;
   }
-  .main-error{
+  .main-error {
     display: none;
+  }
+  .main-container {
+    align-items: unset;
   }
 }
 
