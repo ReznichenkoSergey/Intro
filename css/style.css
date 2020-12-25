@@ -604,7 +604,7 @@ form {
 }
 
 .main-error {
-  grid-area: C;
+  /*grid-area: C;*/
   display: table;
   width: 608.18px;
   height: 53.64px;
@@ -621,6 +621,11 @@ form {
   text-align: center;
   margin-top: 5px;
   margin-bottom: 5px;
+
+  z-index: 1;
+  position: absolute;
+  bottom: -74px;
+  right: calc(100% - 608.18px / 2);
 }
 
 .main-error__text {
@@ -663,14 +668,19 @@ form {
   .logo {
     display: none;
   }
-  .main-error {
-    display: none;
-  }
   .main-container {
     align-items: unset;
   }
-  .support__logo{
+  .support__logo {
     display: none;
+  }
+  .main-error {
+    width: 364.75px;
+    top: 12.87px;
+    left: 0;
+    right: 0;
+    background: #7d817e;
+    border-radius: 5px;
   }
 }
 
@@ -858,12 +868,12 @@ form {
     font-size: 26px;
     line-height: 31.2px;
     text-decoration-line: underline;
-    padding-bottom:2px;
+    padding-bottom: 2px;
   }
   .support__links-mail,
   .support__links-mail:hover,
   .support__links-mail:active,
-  .support__links-mail:focus{
+  .support__links-mail:focus {
     font-size: 26px;
     line-height: 31.2px;
     text-decoration-line: underline;
@@ -876,12 +886,12 @@ form {
   }
 
   .phoneimage,
-  .mailimage{
+  .mailimage {
     height: 26.57px;
     width: 52.57px;
   }
   .phonearrow,
-  .mailarrow{
+  .mailarrow {
     display: none;
   }
 }

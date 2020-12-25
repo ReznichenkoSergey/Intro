@@ -50,7 +50,7 @@ $(".user-location").on("DOMSubtreeModified", function () {
 
 function showHideCommonError() {
   debugger;
-  console.log('OK');
+  console.log("OK");
   let x = document.querySelector(".flow-error");
   if (x.innerHTML.length > 0) {
     x.style.display = "block";
@@ -66,3 +66,14 @@ function sample() {
   console.log(rrr);
   x.innerHTML = rrr.value;
 }
+
+//Событие на изменение span ошибки
+$(document).ready(function () {
+  $(".main-error__text").on("DOMSubtreeModified", function () {
+    if (document.querySelector(".main-error__text").innerHTML.length > 0) {
+      document.querySelector(".main-error").style.display = "table";
+    } else {
+      document.querySelector(".main-error").style.display = "none";
+    }
+  });
+});
