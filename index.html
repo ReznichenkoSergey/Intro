@@ -12,32 +12,42 @@
 </head>
 
 <body>
+    <div class="main-container">
+        <div class="logo">
+            <div class="logo__container">
+                <img class="logo__banner" src="./img/banner.svg" alt="person">
+            </div>
+            <img class="logo__person" src="./img/person.svg" alt="person">
+            <img class="logo__smbin" src="./img/recyclebin_sm.svg" alt="person">
+        </div>
 
-    <form action="">
-        <input type="hidden" id="phonenumber">
-        <div class="phone__header">
-            <span>Для реєстрації введіть<br>номер телефону</span>
-            <a href="./barcode.html"><img class="header-img" src="./img/support.svg" alt="Гаряча лінія"></a>
-        </div>
-        <div class="phone__input">
-            <input onkeyup="formPhoneValidate()" class="phone__input-value" id="phone" type="tel"
-                placeholder="+38 (077) 777 77 77">
-            <span class="phone__input-error"></span>
-        </div>
-        <div class="phone__rules">
-            <input onchange="formPhoneValidate()" class="phone__rules-checkbox" id="checkbox" name="checkbox"
-                type="checkbox">
+        <form action="">
+            <input type="hidden" id="phonenumber">
+            <div class="phone__header">
+                <span>Для реєстрації введіть<br>номер телефону</span>
+                <a href="./barcode.html"><img class="header-img" src="./img/support.svg" alt="Гаряча лінія"></a>
+            </div>
+            <div class="phone__input">
+                <input onkeyup="formPhoneValidate()" class="phone__input-value" id="phone" type="tel"
+                    placeholder="+38 (077) 777 77 77">
+                <span class="phone__input-error"></span>
+            </div>
+            <div class="phone__rules">
+                <input onchange="formPhoneValidate()" class="phone__rules-checkbox" id="checkbox" name="checkbox"
+                    type="checkbox">
 
-            <label class="phone__rules-label" for="checkbox"><span class="phone__rules-text">Я погоджуюсь з <a
-                        class="phone__rules-link" href="https://fozzyshop.ua/upload/app/briefly_about_pl.html">правилами
-                        участі</a> у програмі лояльності та
-                    підтверджую,<br>що мені є 18 років<span></label>
+                <label class="phone__rules-label" for="checkbox"><span class="phone__rules-text">Я погоджуюсь з <a
+                            class="phone__rules-link"
+                            href="https://fozzyshop.ua/upload/app/briefly_about_pl.html">правилами
+                            участі</a> у програмі лояльності та
+                        підтверджую,<br>що мені є 18 років<span></label>
 
-        </div>
-        <div class="phone__submit">
-            <button class="phone__submit-button" type="submit" disabled>ОТРИМАТИ КОД</button>
-        </div>
-    </form>
+            </div>
+            <div class="phone__submit">
+                <button class="phone__submit-button" type="submit" disabled>ОТРИМАТИ КОД</button>
+            </div>
+        </form>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
