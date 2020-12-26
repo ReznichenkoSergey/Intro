@@ -118,7 +118,10 @@ li {
   .phone__rules-flag {
       display: inline-flex;
       align-items: center;
-      user-select: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
       width: 23.02px;
       height: 23.02px;
       box-sizing: border-box;
@@ -929,7 +932,8 @@ vertical-align: middle;
       .support__links-phone:focus {
           font-size: 26px;
           line-height: 31.2px;
-          text-decoration-line: underline;
+          -webkit-text-decoration-line: underline;
+                  text-decoration-line: underline;
           padding-bottom: 2px;
       }
 
@@ -939,7 +943,8 @@ vertical-align: middle;
       .support__links-mail:focus {
           font-size: 26px;
           line-height: 31.2px;
-          text-decoration-line: underline;
+          -webkit-text-decoration-line: underline;
+                  text-decoration-line: underline;
           margin-bottom: 103px;
       }
 
