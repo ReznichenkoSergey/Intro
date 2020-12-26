@@ -68,12 +68,45 @@ function sample() {
 }
 
 //Событие на изменение span ошибки
+/*
 $(document).ready(function () {
   $(".main-error__text").on("DOMSubtreeModified", function () {
     if (document.querySelector(".main-error__text").innerHTML.length > 0) {
       document.querySelector(".main-error").style.display = "table";
     } else {
       document.querySelector(".main-error").removeAttribute("style");
+    }
+  });
+});
+*/
+
+//Событие на изменение span ошибки
+$(document).ready(function () {
+  $(".phone__input-error").on("DOMSubtreeModified", function () {
+    if (document.querySelector(".phone__input-error").innerHTML.length > 0) {
+      document.querySelector(".phone__input-value").style.borderBottom = "1px solid #e40428";
+    } else {
+      document.querySelector(".phone__input-value").removeAttribute("style");
+    }
+  });
+});
+
+$(document).ready(function () {
+  $(".otp__input-error").on("DOMSubtreeModified", function () {
+    if (document.querySelector(".otp__input-error").innerHTML.length > 0) {
+      document.querySelector(".otp__input-value").style.borderBottom = "1px solid #e40428";
+    } else {
+      document.querySelector(".otp__input-value").removeAttribute("style");
+    }
+  });
+});
+
+$(document).ready(function () {
+  $(".barcode__input-error").on("DOMSubtreeModified", function () {
+    if (document.querySelector(".barcode__input-error").innerHTML.length > 0) {
+      document.querySelector(".barcode__input-container").style.borderBottom = "1px solid #e40428";
+    } else {
+      document.querySelector(".barcode__input-container").removeAttribute("style");
     }
   });
 });
