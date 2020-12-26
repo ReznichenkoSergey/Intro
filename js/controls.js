@@ -73,7 +73,7 @@ $(document).ready(function () {
     if (document.querySelector(".main-error__text").innerHTML.length > 0) {
       document.querySelector(".main-error").style.display = "table";
     } else {
-      document.querySelector(".main-error").style.display = "none";
+      document.querySelector(".main-error").removeAttribute("style");
     }
   });
 });
