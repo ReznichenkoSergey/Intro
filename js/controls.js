@@ -90,45 +90,25 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  $(".barcode__input-error").on("DOMSubtreeModified", function () {
-    if (document.querySelector(".barcode__input-error").innerHTML.length > 0) {
-      document.querySelector(".barcode__input-container").style.borderBottom =
-        "1px solid #e40428";
-    } else {
-      document
-        .querySelector(".barcode__input-container")
-        .removeAttribute("style");
-    }
-  });
-});
-
-$(document).ready(function () {
-  $(".logo").on("DOMAttrModified", function () {
-    console.log("DISPLAY");
-
-    if ($(".logo").css("display") === "none") {
-      alert("NONE");
-    } else {
-      alert("ACTIVE");
-    }
-  });
-});
-
-$(document).ready(function () {
-  document.querySelector(".logo").addEventListener("DOMAttrModified", function () {
-      if ($(".logo").css("display") === "none") {
-        console.log("FFFFFFFFFFFF");
+  $(".phone__input-error").on("DOMSubtreeModified", function () {
+      if (document.querySelector(".phone__input-error").innerHTML.length > 0) {
+          document.querySelector(".phone__input-value").style.borderBottom = "1px solid #e40428";
+      } else {
+          document.querySelector(".phone__input-value").removeAttribute("style");
       }
-      console.log("NNNNNNN");
-    },
-    false
-  );
+  });
 });
 
-
-$('.logo').on('stylechanged', function () {
-  console.log('css changed');
+$(document).ready(function () {
+  $(".barcode__input-error").on("DOMSubtreeModified", function () {
+      if (document.querySelector(".barcode__input-error").innerHTML.length > 0) {
+          document.querySelector(".barcode__input-container").style.borderBottom = "1px solid #e40428";
+      } else {
+          document.querySelector(".barcode__input-container").removeAttribute("style");
+      }
+  });
 });
+
 
 /*
 $("#appendTo").click(function() {

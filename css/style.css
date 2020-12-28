@@ -612,6 +612,7 @@ width: 26px;*/
 
 .support__links-mail {
   margin-bottom: 27px;
+  display: none;
 }
 
 .support__links-phone {
