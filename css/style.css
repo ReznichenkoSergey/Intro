@@ -615,7 +615,7 @@ width: 26px;*/
 }
 
 .support__links-phone {
-  margin-bottom: 56px;
+  margin-bottom: calc(56px + 34px + 103px);
 }
 
 /*       Container             */
@@ -974,6 +974,9 @@ vertical-align: middle;
     padding-bottom: 2px;
   }
 
+  .support__links-mail{
+    display: none;
+  }
   .support__links-mail,
   .support__links-mail:hover,
   .support__links-mail:active,
