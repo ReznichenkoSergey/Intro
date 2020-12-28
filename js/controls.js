@@ -41,35 +41,17 @@ function formBarcodeValidate() {
   );
 }
 
-$(".barcode__input-value").keypress(function(event) {
-  return /\d/.test(String.fromCharCode(event.keyCode));
+$(".barcode__input-value").bind('keydown', function (e) {
+  if (e.which < 48 || e.which > 57)
+      return false;
+  return true;
 });
 
-$(".btn").click(function () {
-  $(".user-location").text("New Text");
+$(".phone__input-value").bind('keydown', function (e) {
+  if (e.which < 48 || e.which > 57)
+      return false;
+  return true;
 });
-$(".user-location").on("DOMSubtreeModified", function () {
-  alert("changed");
-});
-
-function showHideCommonError() {
-  debugger;
-  console.log("OK");
-  let x = document.querySelector(".flow-error");
-  if (x.innerHTML.length > 0) {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-function sample() {
-  let x = document.querySelector(".flow-error");
-  let rrr = document.querySelector("#rrr");
-  console.log(x);
-  console.log(rrr);
-  x.innerHTML = rrr.value;
-}
 
 //Событие на изменение span ошибки
 /*
