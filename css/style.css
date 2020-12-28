@@ -27,6 +27,7 @@ li {
   line-height: 20px;
 }
 
+button:focus,
 input:focus {
   outline: none;
 }
@@ -519,6 +520,7 @@ form {
 
 .barcode__submit-button,
 .barcode__submit-button:hover,
+.barcode__submit-button:focus,
 .barcode__submit-button:active {
   width: 240px;
   height: 40px;
@@ -832,10 +834,13 @@ vertical-align: middle;
 
   .phone__submit-button,
   .phone__submit-button:hover,
+  .phone__submit-button:focus,
   .barcode__submit-button,
+  .barcode__submit-button:focus,
   .barcode__submit-button:hover,
   .otp__submit-button,
-  .otp__submit-button:hover {
+  .otp__submit-button:hover,
+  .otp__submit-button:focus {
     width: 440px;
     height: 62.8px;
     font-size: 24px;

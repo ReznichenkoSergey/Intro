@@ -41,6 +41,10 @@ function formBarcodeValidate() {
   );
 }
 
+$(".barcode__input-value").keypress(function(event) {
+  return /\d/.test(String.fromCharCode(event.keyCode));
+});
+
 $(".btn").click(function () {
   $(".user-location").text("New Text");
 });
