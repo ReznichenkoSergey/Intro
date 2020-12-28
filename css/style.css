@@ -955,6 +955,10 @@ vertical-align: middle;
     width: 260px;
   }
 
+  .support__links{
+    width: 320px;
+  }
+
   .support__links-phone,
   .support__links-phone:hover,
   .support__links-phone:active,
