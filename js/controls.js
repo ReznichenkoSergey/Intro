@@ -16,16 +16,17 @@ $(window).load(function () {
 */
 
 $(window).load(function () {
-  $('.phone__rules-checkbox').checked;
-  $('.phone__input-value').value;
-  
+  $(".phone__rules-checkbox").checked;
+  $(".phone__input-value").value;
 });
 function formPhoneValidate() {
   let x = document.querySelector(".phone__rules-checkbox").checked;
   let phoneValue = document.querySelector(".phone__input-value").value;
   let value = phoneValue.replace(/[^+0-9]/g, "");
   console.log(value);
-  document.querySelector(".phone__submit-button").disabled = !(value.length === 13 && x);
+  document.querySelector(".phone__submit-button").disabled = !(
+    value.length === 13 && x
+  );
 }
 
 /*Валидация ОТП кода*/
@@ -43,15 +44,20 @@ function formBarcodeValidate() {
   );
 }
 
-$(".barcode__input-value").bind('keydown', function (e) {
-  if (e.which < 48 || e.which > 57)
-      return false;
+$(".barcode__input-value").bind("keydown", function (e) {
+  if (e.which < 48 || e.which > 57) return false;
   return true;
 });
 
-$(".phone__input-value").bind('keydown', function (e) {
-  if (e.which < 48 || e.which > 57)
-      return false;
+$(".phone__input-value").bind("keydown", function (e) {
+  console.log(e.which);
+  
+  let value = $(".phone__input-value").val();
+  console.log(value.length);
+  if (value.length === 0 && e.which === 48) {
+    return false;
+  }
+  if (e.which < 48 || e.which > 57) return false;
   return true;
 });
 
@@ -93,24 +99,27 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $(".phone__input-error").on("DOMSubtreeModified", function () {
-      if (document.querySelector(".phone__input-error").innerHTML.length > 0) {
-          document.querySelector(".phone__input-value").style.borderBottom = "1px solid #e40428";
-      } else {
-          document.querySelector(".phone__input-value").removeAttribute("style");
-      }
+    if (document.querySelector(".phone__input-error").innerHTML.length > 0) {
+      document.querySelector(".phone__input-value").style.borderBottom =
+        "1px solid #e40428";
+    } else {
+      document.querySelector(".phone__input-value").removeAttribute("style");
+    }
   });
 });
 
 $(document).ready(function () {
   $(".barcode__input-error").on("DOMSubtreeModified", function () {
-      if (document.querySelector(".barcode__input-error").innerHTML.length > 0) {
-          document.querySelector(".barcode__input-container").style.borderBottom = "1px solid #e40428";
-      } else {
-          document.querySelector(".barcode__input-container").removeAttribute("style");
-      }
+    if (document.querySelector(".barcode__input-error").innerHTML.length > 0) {
+      document.querySelector(".barcode__input-container").style.borderBottom =
+        "1px solid #e40428";
+    } else {
+      document
+        .querySelector(".barcode__input-container")
+        .removeAttribute("style");
+    }
   });
 });
-
 
 /*
 $("#appendTo").click(function() {
