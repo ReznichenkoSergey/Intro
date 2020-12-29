@@ -694,6 +694,8 @@ vertical-align: middle;
   margin-right: auto;
   margin-bottom: 71px;
   margin-top: -45px;
+  padding-left: 6px;
+  padding-top: 15px;
 }
 
 .logo__person {
@@ -746,7 +748,7 @@ vertical-align: middle;
     width: calc(100% - 10px);
     padding: 5px 10px;
   }
-  
+
   li {
     font-size: 16px;
     line-height: 20px;
@@ -960,7 +962,7 @@ vertical-align: middle;
     width: 260px;
   }
 
-  .support__links{
+  .support__links {
     width: 320px;
   }
 
@@ -975,7 +977,7 @@ vertical-align: middle;
     padding-bottom: 2px;
   }
 
-  .support__links-mail{
+  .support__links-mail {
     display: none;
   }
   .support__links-mail,

@@ -6,24 +6,26 @@ $(window).load(function () {
 });
 
 /*Валидация телефона*/
+/*function formPhoneValidate() {
+  let x = document.querySelector(".phone__rules-checkbox").checked;
+  let phoneValue = document.querySelector(".phone__input-value").value;
+  let value = phoneValue.replace(/[^+0-9]/g, "");
+  console.log(value);
+  document.querySelector(".phone__submit-button").disabled = !(value.length === 13 && x);
+}
+*/
+
+$(window).load(function () {
+  $('.phone__rules-checkbox').checked;
+  $('.phone__input-value').value;
+  
+});
 function formPhoneValidate() {
   let x = document.querySelector(".phone__rules-checkbox").checked;
   let phoneValue = document.querySelector(".phone__input-value").value;
   let value = phoneValue.replace(/[^+0-9]/g, "");
-  document.querySelector("#phonenumber").value = value;
-  if (value.length === 0) {
-    document.querySelector(".phone__input-value").style.borderColor = null;
-  } else {
-    if (value.length === 13) {
-      document.querySelector(".phone__input-error").innerHTML = "";
-    } else {
-      document.querySelector(".phone__input-error").innerHTML =
-        "Некорректний код мобiльного оператора";
-    }
-  }
-  document.querySelector(".phone__submit-button").disabled = !(
-    value.length === 13 && x
-  );
+  console.log(value);
+  document.querySelector(".phone__submit-button").disabled = !(value.length === 13 && x);
 }
 
 /*Валидация ОТП кода*/
