@@ -68,11 +68,28 @@ function formBarcodeValidate() {
 }
 
 $(".barcode__input-value").bind("keydown", function (e) {
+  if(e.which === 8 || e.which === 46 || e.which === 39 || e.which === 37) return true;
   if (e.which < 48 || e.which > 57) return false;
   return true;
 });
 
+$(".otp__input-value").bind("keydown", function (e) {
+  if(e.which === 8 || e.which === 46 || e.which === 39 || e.which === 37) return true;
+  if (e.which < 48 || e.which > 57) return false;
+  return true;
+});
 
+$(".phone__input-value").bind("keydown", function (e) {
+  let value = $(".phone__input-value").val();
+  if (value.length === 0 && e.which === 48) {
+    return false;
+  }
+  if(e.which === 8 || e.which === 46 || e.which === 39 || e.which === 37) return true;
+  if (e.which < 48 || e.which > 57) return false;
+  return true;
+});
+
+/*
 $(".phone__input-value").bind("keydown", function (e) {
   console.log(e.which);
 
@@ -84,7 +101,7 @@ $(".phone__input-value").bind("keydown", function (e) {
   if (e.which < 48 || e.which > 57) return false;
   return true;
 });
-
+*/
 //Событие на изменение span ошибки
 /*
 $(document).ready(function () {
