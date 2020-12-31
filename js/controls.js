@@ -19,6 +19,7 @@ $(window).load(function () {
   $(".phone__rules-checkbox").checked;
   $(".phone__input-value").value;
 });
+
 function formPhoneValidate() {
   let x = document.querySelector(".phone__rules-checkbox").checked;
   let phoneValue = document.querySelector(".phone__input-value").value;
@@ -28,6 +29,28 @@ function formPhoneValidate() {
     value.length === 13 && x
   );
 }
+/*
+$(window).load(function () {
+  //alert("Load");
+
+  let x = document.querySelector(".phone__rules-checkbox").checked;
+
+  //alert(x);
+
+  let phoneValue = document.querySelector(".phone__input-value").value;
+  let value = phoneValue.replace(/[^+0-9]/g, "");
+  console.log(value);
+  document.querySelector(".phone__submit-button").disabled = !(
+    value.length === 13 && x
+  );
+
+});*/
+
+/*
+$(document).ready(function(){
+  console.log("asdasdasdas");
+  formPhoneValidate();
+});*/
 
 /*Валидация ОТП кода*/
 function formOtpValidate() {
@@ -49,9 +72,10 @@ $(".barcode__input-value").bind("keydown", function (e) {
   return true;
 });
 
+
 $(".phone__input-value").bind("keydown", function (e) {
   console.log(e.which);
-  
+
   let value = $(".phone__input-value").val();
   console.log(value.length);
   if (value.length === 0 && e.which === 48) {

@@ -15,6 +15,7 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 5px 10px;
+  width: 100%;
 }
 
 li {
@@ -453,7 +454,7 @@ form {
 .barcode__input-value {
   border: none;
   height: 37px;
-  width: 225px;
+  width: 100%;
   font-family: "Lato", sans-serif;
   font-size: 26px;
   font-weight: 700;
@@ -478,7 +479,6 @@ form {
   display: block;
   height: 34px;
   text-align: center;
-  white-space: nowrap;
   margin-bottom: 27px;
 }
 
@@ -747,6 +747,8 @@ vertical-align: middle;
     line-height: 20px;
     width: calc(100% - 10px);
     padding: 5px 10px;
+    display: flex;
+    align-items: center;
   }
 
   li {
@@ -975,6 +977,8 @@ vertical-align: middle;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
     padding-bottom: 2px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .support__links-mail {
