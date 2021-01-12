@@ -365,6 +365,15 @@ form {
   left: 252px;
   border: 1px solid black;
 
+  z-index: 1;
+  -webkit-background-z-index: 1;
+  -moz-background-z-index: 1;
+  -khtml-background-z-index: 1;
+
+  -webkit-background-color: #ffffff;
+  -moz-background-color: #ffffff;
+  -khtml-background-color: #ffffff;
+
   -webkit-position: relative;
   -moz-position: relative;
   -khtml-position: relative;
