@@ -28,9 +28,17 @@ li {
   line-height: 20px;
 }
 
+input {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+
 button:focus,
 input:focus {
   outline: none;
+  -webkit-outline: none;
+  -moz-outline: none;
 }
 
 form {

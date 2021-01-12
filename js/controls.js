@@ -14,12 +14,12 @@ $(window).load(function () {
   document.querySelector(".phone__submit-button").disabled = !(value.length === 13 && x);
 }
 */
-
+/*
 $(window).load(function () {
   $(".phone__rules-checkbox").checked;
   $(".phone__input-value").value;
 });
-
+*/
 function formPhoneValidate() {
   let x = document.querySelector(".phone__rules-checkbox").checked;
   let phoneValue = document.querySelector(".phone__input-value").value;
@@ -80,6 +80,8 @@ $(".otp__input-value").bind("keydown", function (e) {
 });
 
 $(".phone__input-value").bind("keydown", function (e) {
+  console.log(e.which);
+  
   let value = $(".phone__input-value").val();
   if (value.length === 0 && e.which === 48) {
     return false;
@@ -88,6 +90,15 @@ $(".phone__input-value").bind("keydown", function (e) {
   if (e.which < 48 || e.which > 57) return false;
   return true;
 });
+
+window.onload = function () {
+  console.log("dddd")
+  let phoneValue = document.querySelector(".otp__input-value");
+  console.log(phoneValue)
+  if (phoneValue !== null) {
+      formOtpValidate();
+  }
+};
 
 /*
 $(".phone__input-value").bind("keydown", function (e) {
