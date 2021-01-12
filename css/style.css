@@ -358,10 +358,10 @@ form {
 
 .otp__input-overlay {
   background-color: red;
-  position: relative;
+  position: absolute;
   width: 52px;
   height: 52px;
-  top: -51px;
+  top: 3px;
   left: 252px;
   border: 1px solid black;
 
