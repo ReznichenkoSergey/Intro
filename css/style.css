@@ -350,6 +350,7 @@ form {
   padding-left: 10px;
   padding-bottom: 11px;
   z-index: -1;
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .otp__input-value:focus {
@@ -366,9 +367,9 @@ form {
   left: 252px;
   border: 1px solid black;
 
+  z-index: 999 !important;
   -webkit-transform: translate3d(0,0,0);
-  
-   z-index: 999 !important;
+
 /*
   -webkit-background-color: #ffffff;
   -moz-background-color: #ffffff;
