@@ -363,6 +363,7 @@ form {
   height: 52px;
   top: -51px;
   left: 252px;
+  border: 1px solid black;
 
   -webkit-position: relative;
   -moz-position: relative;
