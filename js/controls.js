@@ -55,6 +55,7 @@ $(document).ready(function(){
 /*Валидация ОТП кода*/
 function formOtpValidate() {
   let otp = document.querySelector(".otp__input-value");
+  if(otp.value.length === 6) otp.blur();
   document.querySelector(".otp__submit-button").disabled = !(
     otp.value.length === 6
   );
@@ -68,35 +69,38 @@ function formBarcodeValidate() {
 }
 
 $(".barcode__input-value").bind("keydown", function (e) {
-  if(e.which === 8 || e.which === 46 || e.which === 39 || e.which === 37) return true;
+  if (e.which === 8 || e.which === 46 || e.which === 39 || e.which === 37)
+    return true;
   if (e.which < 48 || e.which > 57) return false;
   return true;
 });
 
 $(".otp__input-value").bind("keydown", function (e) {
-  if(e.which === 8 || e.which === 46 || e.which === 39 || e.which === 37) return true;
+  if (e.which === 8 || e.which === 46 || e.which === 39 || e.which === 37)
+    return true;
   if (e.which < 48 || e.which > 57) return false;
   return true;
 });
 
 $(".phone__input-value").bind("keydown", function (e) {
   console.log(e.which);
-  
+
   let value = $(".phone__input-value").val();
   if (value.length === 0 && e.which === 48) {
     return false;
   }
-  if(e.which === 8 || e.which === 46 || e.which === 39 || e.which === 37) return true;
+  if (e.which === 8 || e.which === 46 || e.which === 39 || e.which === 37)
+    return true;
   if (e.which < 48 || e.which > 57) return false;
   return true;
 });
 
 window.onload = function () {
-  console.log("dddd")
+  console.log("dddd");
   let phoneValue = document.querySelector(".otp__input-value");
-  console.log(phoneValue)
+  console.log(phoneValue);
   if (phoneValue !== null) {
-      formOtpValidate();
+    formOtpValidate();
   }
 };
 
@@ -180,3 +184,32 @@ $("#appendTo").click(function() {
 $("#prependTo").click(function() {
   $("#moveMeIntoMain").prependTo($("#main"));
 });*/
+
+function focus() {}
+
+var obj = document.querySelector(".otp__input-value");
+obj.addEventListener("keydown", stopCarret);
+obj.addEventListener("keyup", stopCarret);
+
+function stopCarret() {
+  if (obj.value.length > 6) {
+    //setCaretPosition(obj, 6);
+    obj.blur();
+  }
+}
+
+function setCaretPosition(elem, caretPos) {
+  debugger;
+  if (elem != null) {
+    if (elem.createTextRange) {
+      var range = elem.createTextRange();
+      range.move("character", caretPos);
+      range.select();
+    } else {
+      if (elem.selectionStart) {
+        elem.focus();
+        elem.setSelectionRange(caretPos, caretPos);
+      } else elem.focus();
+    }
+  }
+}

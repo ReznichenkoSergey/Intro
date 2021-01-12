@@ -349,8 +349,12 @@ form {
   letter-spacing: 28px;
   padding-left: 10px;
   padding-bottom: 11px;
-  z-index: -1;
-  -webkit-transform: translate3d(0,0,0);
+
+
+  
+
+ /* z-index: -1;
+  -webkit-transform: translate3d(0,0,0);*/
 }
 
 .otp__input-value:focus {
@@ -359,16 +363,16 @@ form {
 }
 
 .otp__input-overlay {
-  background-color: green;
+  background-color: lightgreen;
   position: absolute;
   width: 52px;
   height: 52px;
   top: 3px;
   left: 252px;
   border: 1px solid black;
-
+/*
   z-index: 999 !important;
-  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);*/
 
 /*
   -webkit-background-color: #ffffff;
