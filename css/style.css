@@ -93,7 +93,7 @@ form {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 53.4px;
-  width: 230px;
+  width: 259px;
 }
 
 .phone__input-value {
@@ -106,7 +106,7 @@ form {
   font-style: normal;
   line-height: 24px;
   height: 28px;
-  width: 230px;
+  width: 259px;
   text-align: center;
   padding-bottom: 8px;
   border-bottom: 1px solid #232e83;
@@ -363,6 +363,18 @@ form {
   height: 52px;
   top: -51px;
   left: 252px;
+
+  -webkit-position: relative;
+  -moz-position: relative;
+  -khtml-position: relative;
+
+  -webkit-top: -51px;
+  -moz-top: -51px;
+  -khtml-top: -51px;
+
+  -webkit-left: 252px;
+  -moz-left: 252px;
+  -khtml-left: 252px;
 }
 
 /**/
