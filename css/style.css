@@ -357,7 +357,7 @@ form {
 }
 
 .otp__input-overlay {
-  background-color: red;
+  background-color: yellow;
   position: absolute;
   width: 52px;
   height: 52px;
@@ -365,10 +365,8 @@ form {
   left: 252px;
   border: 1px solid black;
 
-  z-index: 1;
-
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0,0,0);
+   z-index: 999;
 /*
   -webkit-background-color: #ffffff;
   -moz-background-color: #ffffff;
