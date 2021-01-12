@@ -367,9 +367,8 @@ form {
 
   z-index: 1;
 
-  -webkit-background-z-index: 1;
-  -moz-background-z-index: 1;
-  -khtml-background-z-index: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 /*
   -webkit-background-color: #ffffff;
   -moz-background-color: #ffffff;
