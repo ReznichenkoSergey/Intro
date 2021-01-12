@@ -349,6 +349,7 @@ form {
   letter-spacing: 28px;
   padding-left: 10px;
   padding-bottom: 11px;
+  z-index: -1;
 }
 
 .otp__input-value:focus {
@@ -357,7 +358,7 @@ form {
 }
 
 .otp__input-overlay {
-  background-color: yellow;
+  background-color: green;
   position: absolute;
   width: 52px;
   height: 52px;
@@ -366,6 +367,7 @@ form {
   border: 1px solid black;
 
   -webkit-transform: translate3d(0,0,0);
+  
    z-index: 999 !important;
 /*
   -webkit-background-color: #ffffff;
