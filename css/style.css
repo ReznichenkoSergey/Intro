@@ -349,12 +349,6 @@ form {
   letter-spacing: 28px;
   padding-left: 10px;
   padding-bottom: 11px;
-
-
-  
-
- /* z-index: -1;
-  -webkit-transform: translate3d(0,0,0);*/
 }
 
 .otp__input-value:focus {
@@ -363,33 +357,13 @@ form {
 }
 
 .otp__input-overlay {
-  background-color: lightgreen;
+  background-color: #ffffff;
   position: absolute;
   width: 52px;
   height: 52px;
   top: 3px;
   left: 252px;
-  border: 1px solid black;
-/*
-  z-index: 999 !important;
-  -webkit-transform: translate3d(0,0,0);*/
-
-/*
-  -webkit-background-color: #ffffff;
-  -moz-background-color: #ffffff;
-  -khtml-background-color: #ffffff;
-
-  -webkit-position: relative;
-  -moz-position: relative;
-  -khtml-position: relative;
-
-  -webkit-top: -51px;
-  -moz-top: -51px;
-  -khtml-top: -51px;
-
-  -webkit-left: 252px;
-  -moz-left: 252px;
-  -khtml-left: 252px;*/
+  border: none;
 }
 
 /**/
