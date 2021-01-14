@@ -55,7 +55,7 @@ $(document).ready(function(){
 /*Валидация ОТП кода*/
 function formOtpValidate() {
   let otp = document.querySelector(".otp__input-value");
-  if(otp.value.length === 6) otp.blur();
+  if (otp.value.length === 6) otp.blur();
   document.querySelector(".otp__submit-button").disabled = !(
     otp.value.length === 6
   );
@@ -188,16 +188,17 @@ $("#prependTo").click(function() {
 function focus() {}
 
 var obj = document.querySelector(".otp__input-value");
-obj.addEventListener("keydown", stopCarret);
-obj.addEventListener("keyup", stopCarret);
+if (obj !== null) {
+  obj.addEventListener("keydown", stopCarret);
+  obj.addEventListener("keyup", stopCarret);
 
-function stopCarret() {
-  if (obj.value.length > 6) {
-    //setCaretPosition(obj, 6);
-    obj.blur();
+  function stopCarret() {
+    if (obj.value.length > 6) {
+      //setCaretPosition(obj, 6);
+      obj.blur();
+    }
   }
 }
-
 function setCaretPosition(elem, caretPos) {
   debugger;
   if (elem != null) {
