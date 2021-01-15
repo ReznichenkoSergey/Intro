@@ -1125,26 +1125,143 @@ video {
 canvas.drawing,
 canvas.drawingBuffer {
   grid-area: B1;
-  border: 2px solid #c4c4c4;
+  border: 2px solid #FFFFFF;
   width: 262.72px;
   height: 139.06px;
-  background: #c4c4c4;
-  opacity: 30%;
+  background: #C4C4C4;
+  opacity: 70%;
   border-radius: 10px;
 }
 
 .video-container video {
   min-width: 100%;
   min-height: 100%;
-
-  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
   width: auto;
   height: auto;
-
-  /* Center the video */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+}
+
+/* Corners */
+
+/* 11 */
+.corner-topleft_out {
+  width: 10px;
+  height: 10px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.corner-topleft_in {
+  width: 20px;
+  height: 20px;
+  border: none;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 0 500px #4b4848;
+  opacity: 60%;
+}
+
+/* 12 */
+.corner-topright_out {
+  width: 10px;
+  height: 10px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  top: -10px;
+  left: 252.72px;
+}
+
+.corner-topright_in {
+  width: 20px;
+  height: 20px;
+  border: none;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 0 500px #4b4848;
+  opacity: 60%;
+  right: 0;
+}
+
+/* 21 */
+.corner-botleft_out {
+  width: 10px;
+  height: 10px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  top: 109.2px; /*-139.06px;*/
+}
+
+.corner-botleft_in {
+  width: 25px;
+  height: 20px;
+  border: none;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 0 500px #4b4848;
+  opacity: 60%;
+  bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 12 */
+.corner-botright_out {
+  width: 10px;
+  height: 9px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  top: -10px;
+  left: 252.72px;
+  top: 100.2px;
+}
+
+.corner-botright_in {
+  width: 25px;
+  height: 20px;
+  border: none;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 0 500px #4b4848;
+  opacity: 60%;
+  right: 0;
+  bottom: 0;
+}
+
+
+
+
+.bottom .сorner-topleft_in {
+  bottom: 0;
+  left: 200px;
+}
+
+br {
+  display: none;
+}
+
+.central {
+  grid-area: B1;
+  background-color: transparent;
+  opacity: 100%;
 }
