@@ -2,6 +2,25 @@ $(window).load(function () {
   var phones = [{ mask: "+38 (0##) ### ## ##" }];
   $("#phone").inputmask({
     mask: phones,
+    definitions: { "#": { validator: "[0-9]", cardinality: 1 } },
+  });
+});
+
+//$('#phone').inputmask("+38(099) 999-99-99", {"placeholder": "7", clearMaskOnLostFocus : false});
+/*
+$(window).load(function () {
+  var barcode = [{ mask: "# ###### ######" }];
+  $(".barcode__input-value").inputmask({
+    mask: barcode,
+  });
+});*/
+
+$(window).load(function () {
+  var phones = [{ mask: "# ###### ######" }];
+  $(".barcode__input-value").inputmask({
+    mask: phones,
+    greedy: false,
+    definitions: { "#": { validator: "[0-9]", cardinality: 1 } },
   });
 });
 
@@ -86,6 +105,9 @@ $(".phone__input-value").bind("keydown", function (e) {
   console.log(e.which);
 
   let value = $(".phone__input-value").val();
+  if (e.target.selectionStart <= 6 && (e.which === 37 || e.which === 8)) {
+    return false;
+  }
   if (value.length === 0 && e.which === 48) {
     return false;
   }

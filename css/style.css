@@ -39,6 +39,11 @@ input {
   -khtml-border: none;
 }
 
+input::placeholder,
+input::-moz-placeholder {
+  color: #7d817e;
+}
+
 button:focus,
 input:focus {
   outline: none;
@@ -1031,9 +1036,9 @@ vertical-align: middle;
 
 canvas.drawing,
 canvas.drawingBuffer {
-    position: absolute;
-    left: 0;
-    top: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 /*
 video {
@@ -1046,27 +1051,91 @@ video {
     max-height: 100%;
 }*/
 
+video {
+  background-color: #4b4848;
+  opacity: 0.8;
+}
+
 .video-container {
+  /*
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: "A B" "C C";
+  grid-template-columns: 1fr 1.5fr;
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+  */
+  display: grid;
+  grid-template-areas: "A1 A1 A1" "A21 B1 A22" "A3 A3 A3";
+  grid-template-columns: auto 262.72px auto;
+  grid-template-rows: auto 139.06px auto;
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   overflow: hidden;
+  /*background: #4b4848;
+  opacity: 100%;*/
 }
 /*#canva_camera {
   height: 300px;
   width: 300px;
 }*/
 
-.video__container{
+.video__container {
   padding-top: 0;
 }
 
+.video__form {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.video__form-overlay1 {
+  grid-area: A1;
+}
+.video__form-overlay21 {
+  grid-area: A21;
+}
+.video__form-overlay22 {
+  grid-area: A22;
+}
+.video__form-overlay3 {
+  grid-area: A3;
+}
+
+.video__form-overlay1,
+.video__form-overlay21,
+.video__form-overlay22,
+.video__form-overlay3 {
+  background: #4b4848;
+  position: relative;
+  opacity: 60%;
+}
+
+.video__from-radius {
+  grid-area: B1;
+}
+
+canvas.drawing,
+canvas.drawingBuffer {
+  grid-area: B1;
+  border: 2px solid #c4c4c4;
+  width: 262.72px;
+  height: 139.06px;
+  background: #c4c4c4;
+  opacity: 30%;
+  border-radius: 10px;
+}
+
 .video-container video {
-  /* Make video to at least 100% wide and tall */
-  min-width: 100%; 
-  min-height: 100%; 
+  min-width: 100%;
+  min-height: 100%;
 
   /* Setting width & height to auto prevents the browser from stretching or squishing the video */
   width: auto;
@@ -1076,5 +1145,6 @@ video {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
