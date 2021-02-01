@@ -33,13 +33,12 @@
             <div class="barcode__header">
                 <span class="barcode__header-label">Для реєстрації введіть<br>номер картки</span>
                 <a href="./otp.html"><img class="header-img" src="./img/support.svg" alt="Гаряча лінія"></a>
+                <a onclick="showScanner()"><img class="scanner-img" src="./img/scanner.svg" alt="Сканер"></a>
             </div>
             <div class="barcode__input">
                 <div class="barcode__input-container">
                     <input onkeyup="formBarcodeValidate()" class="barcode__input-value" id="barcode" type="tel"
-                        size="13" maxlength="13"
-                        placeholder="0 290000 000000" required pattern="0 29\d{4} \d{6}"
-                        >
+                        size="13" maxlength="13" placeholder="0 290000 000000" required pattern="0 29\d{4} \d{6}">
                 </div>
                 <span class="barcode__input-error">Не корректный номер карты</span>
                 <a class="barcode__input-link" href="#">У мене немає картки</a>
@@ -54,8 +53,150 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
+    <script src="./js/quagga.js"></script>
     <script src="./js/controls.js"></script>
-    
+    <script type="text/javascript">
+        function showScanner() {
+
+            let form = document.querySelector("form");
+
+            //video__form
+            let video__form = document.createElement("div");
+            video__form.setAttribute("class", "video__form");
+
+            //video__header
+            let video__header = document.createElement("div");
+            video__header.setAttribute("class", "video__header");
+
+            //video__header-link
+            let video__header_link = document.createElement("a");
+            video__header_link.setAttribute("class", "video__header-link");
+            video__header_link.setAttribute("href", "#");
+            
+            //video__header-image
+            let video__header_image = document.createElement("img");
+            video__header_image.setAttribute("class", "video__header-image");
+            video__header_image.setAttribute("src", "./img/back_arrow.svg");
+            video__header_image.innerText = "Проскануйте штрихкод";
+            video__header_link.appendChild(video__header_image);
+            video__header.appendChild(video__header_link);
+
+            //video-container
+            let video_container = document.createElement("div");
+            video_container.setAttribute("class", "video-container");
+            video_container.setAttribute("id", "canva_camera");
+
+            //video__form-overlay1
+            let video__form_overlay1 = document.createElement("div");
+            video__form_overlay1.setAttribute("class", "video__form-overlay1");
+            video_container.appendChild(video__form_overlay1);
+            //video__form-overlay21
+            let video__form_overlay21 = document.createElement("div");
+            video__form_overlay21.setAttribute("class", "video__form-overlay21");
+            video_container.appendChild(video__form_overlay21);
+            //video__form-overlay22
+            let video__form_overlay22 = document.createElement("div");
+            video__form_overlay22.setAttribute("class", "video__form-overlay22");
+            video_container.appendChild(video__form_overlay22);
+            //video__form-overlay3
+            let video__form_overlay3 = document.createElement("div");
+            video__form_overlay3.setAttribute("class", "video__form-overlay3");
+            video_container.appendChild(video__form_overlay3);
+
+            //central
+            let central = document.createElement("div");
+            central.setAttribute("class", "central");
+
+            //corner-topleft_out
+            let corner_topleft_out = document.createElement("div");
+            corner_topleft_out.setAttribute("class", "corner-topleft_out");
+            //corner-topleft_in
+            let corner_topleft_in = document.createElement("div");
+            corner_topleft_in.setAttribute("class", "corner-topleft_in");
+            corner_topleft_out.appendChild(corner_topleft_in);
+            central.appendChild(corner_topleft_out);
+
+            //corner-topright_out
+            let corner_topright_out = document.createElement("div");
+            corner_topright_out.setAttribute("class", "corner-topright_out");
+            //corner-topright_in
+            let corner_topright_in = document.createElement("div");
+            corner_topright_in.setAttribute("class", "corner-topright_in");
+            corner_topright_out.appendChild(corner_topright_in);
+            central.appendChild(corner_topright_out);
+
+            //corner-botleft_out
+            let corner_botleft_out = document.createElement("div");
+            corner_botleft_out.setAttribute("class", "corner-botleft_out");
+            //corner-botleft_in
+            let corner_botleft_in = document.createElement("div");
+            corner_botleft_in.setAttribute("class", "corner-botleft_in");
+            corner_botleft_out.appendChild(corner_botleft_in);
+            central.appendChild(corner_botleft_out);
+
+            //corner-botright_out
+            let corner_botright_out = document.createElement("div");
+            corner_botright_out.setAttribute("class", "corner-botright_out");
+            //corner-botright_in
+            let corner_botright_in = document.createElement("div");
+            corner_botright_in.setAttribute("class", "corner-botright_in");
+            corner_botright_out.appendChild(corner_botright_in);
+            central.appendChild(corner_botright_out);
+
+            video_container.appendChild(central);
+            video__form.appendChild(video__header)
+            video__form.appendChild(video_container)
+            form.appendChild(video__form);
+
+            Quagga.init({
+                inputStream: {
+                    name: "Live",
+                    type: "LiveStream",
+                    target: document.querySelector('#canva_camera')
+                },
+                decoder: {
+                    readers: ["ean_reader"]
+                }
+            }, function (err) {
+                if (err) {
+                    console.log(err);
+                    return
+                }
+                console.log("Initialization finished. Ready to start");
+                Quagga.start();
+            })
+
+            Quagga.onDetected(function (result) {
+                $("#barcode").val(result.codeResult.code)
+                video__form.remove();
+            })
+
+            Quagga.onProcessed(function (result) {
+                var drawingCtx = Quagga.canvas.ctx.overlay,
+                    drawingCanvas = Quagga.canvas.dom.overlay;
+
+                if (result) {
+                    if (result.boxes) {
+                        drawingCtx.clearRect(0, 0, parseInt(drawingCanvas.getAttribute("width")), parseInt(drawingCanvas.getAttribute("height")));
+                        result.boxes.filter(function (box) {
+                            return box !== result.box;
+                        }).forEach(function (box) {
+                            Quagga.ImageDebug.drawPath(box, { x: 0, y: 1 }, drawingCtx, { color: "green", lineWidth: 2 });
+                        });
+                    }
+
+                    if (result.box) {
+                        Quagga.ImageDebug.drawPath(result.box, { x: 0, y: 1 }, drawingCtx, { color: "#00F", lineWidth: 2 });
+                    }
+
+                    if (result.codeResult && result.codeResult.code) {
+                        Quagga.ImageDebug.drawPath(result.line, { x: 'x', y: 'y' }, drawingCtx, { color: 'red', lineWidth: 3 });
+                    }
+                }
+            });
+        }
+
+    </script>
 </body>
 
 </html>

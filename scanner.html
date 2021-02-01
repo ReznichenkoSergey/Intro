@@ -12,12 +12,15 @@
 </head>
 
 <body>
-    <div class="main-container video__container">
-        <form class="video__form" action="" autocomplete="off">
+    
+        <div class="video__form">
 
-            <span>barcode</span>
-            <input style="border: 1px solid red;" type="text" name="barcode" id="value_barcode">
+            <input style="display: none;" type="text" name="barcode" id="value_barcode">
 
+            <div class="video__header">
+                <a class="video__header-link" href="#">
+                    <img class="video__header-image" src="./img/back_arrow.svg" alt="Return">Проскануйте штрихкод</a>
+            </div>
             <div class="video-container" id="canva_camera">
                 <div class="video__form-overlay1"></div>
                 <div class="video__form-overlay21"></div>
@@ -41,8 +44,8 @@
                         <div class="corner-botright_in"></div>
                     </div>
             </div>
-        </form>
-    </div>
+        </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>

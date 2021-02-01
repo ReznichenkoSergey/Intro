@@ -236,3 +236,9 @@ function setCaretPosition(elem, caretPos) {
     }
   }
 }
+
+
+function otpValueChanged(){
+  let otp = document.querySelector(".otp__input-value");
+  otp.value = "444444";
+}
